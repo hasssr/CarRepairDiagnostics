@@ -15,14 +15,14 @@ public class Part {
 	private ConditionType condition;
 
 
-	public boolean isInWorkingCondition() {
+	public boolean isNotWorking() {
 		switch (this.condition) {
 			case NEW:
 			case GOOD:
 			case WORN:
-				return true;
-			default:
 				return false;
+			default:
+				return true;
 		}
 	}
 

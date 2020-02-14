@@ -21,7 +21,7 @@ public class CarDiagnosticEngine {
 
 		if(missingParts.isEmpty()) {
 			final List<Part> damagedParts = car.getParts().stream().filter(part ->
-					part.isInWorkingCondition()).collect(Collectors.toList());
+					part.isNotWorking()).collect(Collectors.toList());
 
 			if(damagedParts.isEmpty()) {
 				System.out.println("Congratulations! Your car is in good condition");
